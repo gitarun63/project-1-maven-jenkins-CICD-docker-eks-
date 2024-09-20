@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "vsv-vsv-vsv"
+    bucket = "jenkin-serverbuc"
     key    = "eks/terraform.tfstate"
-    region = "us-east-1"
+    region = "ap-south-1"
   }
 
   required_version = ">= 1.6.3"
