@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"  # Specify your desired region
+  region = "ap-south-1"  # Specify your desired region
 }
 
  #Creating IAM role for EKS
@@ -113,7 +113,7 @@ provider "aws" {
  # data source 
  data "aws_vpc" "main" {
   tags = {
-    Name = "Jumphost-vpc"  # Specify the name of your existing VPC
+    Name = "arun"  # Specify the name of your existing VPC
   }
 }
 
@@ -169,7 +169,7 @@ data "aws_security_group" "selected" {
     instance_types  = ["t2.small"]
 
     remote_access {
-      ec2_ssh_key               = "sri"
+      ec2_ssh_key               = "arunEC2"
       source_security_group_ids = [data.aws_security_group.selected.id]
     }
 
