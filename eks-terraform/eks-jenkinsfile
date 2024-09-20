@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'ACTION', defaultValue: 'apply', description: 'Terraform action: apply or destroy')    
+        string(name: 'ACTION', defaultValue: 'destroy', description: 'Terraform action: apply or destroy')    
     }
     stages {
         stage('Checkout from Git'){
